@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Complete VA Playbook — VA disability claims and health care guides written by two 100% service-disabled veterans. Get the benefits you earned.">
+<meta name="keywords" content="VA disability claim, VA health care, veteran benefits, service connected disability, 100% VA rating">
+<title>The Complete VA Playbook | Written by Veterans, For Veterans</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --navy: #1c2d4a;
+    --navy-dark: #111e33;
+    --steel: #2878a8;
+    --steel-light: #dceef9;
+    --gold: #c8a84b;
+    --gold-light: #f5d97a;
+    --white: #ffffff;
+    --off-white: #f4f7fb;
+    --text: #1a1a2e;
+    --muted: #5a6a7a;
+    --border: #dde4ec;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--text);
+    background: var(--white);
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--navy-dark);
+    border-bottom: 2px solid var(--gold);
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 58px;
+  }
+
+  .nav-brand {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.5px;
+    text-decoration: none;
+  }
+
+  .nav-brand span { color: var(--gold); }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(160deg, var(--navy-dark) 0%, #1a3460 60%, #0f2040 100%);
+    padding: 80px 24px 72px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(40,120,168,0.2) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 50%, rgba(200,168,75,0.07) 0%, transparent 55%);
+  }
+
+  .hero-inner { position: relative; max-width: 780px; margin: 0 auto; }
+
+  .hero-eyebrow {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 6px 16px;
+    border: 1px solid rgba(200,168,75,0.35);
+    border-radius: 2px;
+  }
+
+  .hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(36px, 6vw, 58px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 span { color: var(--gold); }
+
+  .hero-sub {
+    font-size: 18px;
+    color: rgba(255,255,255,0.75);
+    max-width: 560px;
+    margin: 0 auto 36px;
+    line-height: 1.6;
+  }
+
+  .star-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 36px;
+    color: rgba(255,255,255,0.2);
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .star-div::before,
+  .star-div::after {
+    content: '';
+    flex: 1;
+    max-width: 120px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(200,168,75,0.5), transparent);
+  }
+
+  .star-div .stars { color: var(--gold); font-size: 13px; letter-spacing: 4px; }
+
+  .email-form {
+    display: flex;
+    gap: 8px;
+    max-width: 480px;
+    margin: 0 auto 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .email-form input {
+    flex: 1;
+    min-width: 240px;
+    padding: 13px 18px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 3px;
+    background: rgba(255,255,255,0.1);
+    color: var(--white);
+    outline: none;
+  }
+
+  .email-form input::placeholder { color: rgba(255,255,255,0.45); }
+  .email-form input:focus { border-color: var(--steel); background: rgba(255,255,255,0.15); }
+
+  .btn-gold {
+    padding: 13px 24px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: var(--gold);
+    color: var(--navy-dark);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+
+  .btn-gold:hover { background: var(--gold-light); }
+
+  .hero-note {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--navy);
+    padding: 18px 24px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.75);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+
+  .trust-icon {
+    width: 28px;
+    height: 28px;
+    background: rgba(200,168,75,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 13px;
+  }
+
+  /* ── SECTION ── */
+  section { padding: 72px 24px; }
+
+  .section-inner { max-width: 960px; margin: 0 auto; }
+
+  .section-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--steel);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+
+  .section-title span { color: var(--steel); }
+
+  .section-body {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 620px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+
+  .divider {
+    width: 48px;
+    height: 3px;
+    background: var(--gold);
+    margin-bottom: 28px;
+    border-radius: 2px;
+  }
+
+  /* ── BOOKS ── */
+  .books-section { background: var(--off-white); }
+
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+    margin-top: 16px;
+  }
+
+  .book-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .book-card-header {
+    background: linear-gradient(135deg, var(--navy) 0%, #1a3560 100%);
+    padding: 32px 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .book-cover-mock {
+    width: 90px;
+    height: 126px;
+    background: linear-gradient(160deg, #1a3a6a 0%, #0d2040 100%);
+    border: 2px solid var(--gold);
+    border-radius: 2px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .book-cover-mock .cover-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 9px;
+    color: var(--white);
+    line-height: 1.3;
+    letter-spacing: 0.3px;
+  }
+
+  .book-cover-mock .cover-gold {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-top: 4px;
+    line-height: 1.2;
+  }
+
+  .book-cover-mock .cover-line {
+    width: 30px;
+    height: 1px;
+    background: var(--gold);
+    margin: 6px auto;
+  }
+
+  .book-meta { flex: 1; }
+
+  .book-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+    margin-bottom: 8px;
+  }
+
+  .badge-blue { background: rgba(40,120,168,0.2); color: #7fb3d3; }
+  .badge-gold { background: rgba(200,168,75,0.2); color: var(--gold-light); }
+
+  .book-title-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.25;
+    margin-bottom: 4px;
+  }
+
+  .book-subtitle-text {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.4;
+    font-style: italic;
+  }
+
+  .book-card-body { padding: 24px 28px; flex: 1; }
+
+  .book-bullets {
+    list-style: none;
+    margin-bottom: 24px;
+  }
+
+  .book-bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 15px;
+    color: var(--muted);
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.45;
+  }
+
+  .book-bullets li:last-child { border-bottom: none; }
+
+  .bullet-check { color: var(--steel); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+  .book-price {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .price-item { text-align: center; }
+
+  .price-label { font-size: 11px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
+
+  .price-amount {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .price-divider { width: 1px; height: 36px; background: var(--border); }
+
+  .btn-amazon {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-amazon:hover { background: var(--steel); }
+
+  /* ── STORY ── */
+  .story-section { background: var(--white); }
+
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  @media (max-width: 680px) {
+    .story-grid { grid-template-columns: 1fr; }
+  }
+
+  .story-text p {
+    font-size: 17px;
+    color: var(--muted);
+    margin-bottom: 16px;
+    line-height: 1.75;
+  }
+
+  .story-text p strong { color: var(--navy); font-weight: 700; }
+
+  .story-text .pull-quote {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.4;
+    padding: 20px 20px 20px 24px;
+    border-left: 4px solid var(--gold);
+    background: var(--off-white);
+    border-radius: 0 4px 4px 0;
+    margin: 24px 0;
+    font-style: italic;
+  }
+
+  .author-cards { display: flex; flex-direction: column; gap: 16px; }
+
+  .author-card {
+    background: var(--off-white);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--steel);
+    border-radius: 0 6px 6px 0;
+    padding: 20px 20px 20px 20px;
+  }
+
+  .author-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .author-creds {
+    font-size: 13px;
+    color: var(--steel);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  .author-bio {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* ── FREE RESOURCE ── */
+  .resource-section {
+    background: linear-gradient(135deg, var(--navy) 0%, #1a3560 100%);
+    padding: 64px 24px;
+  }
+
+  .resource-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .resource-inner .section-label { color: var(--gold); }
+
+  .resource-inner .section-title { color: var(--white); margin-bottom: 16px; }
+
+  .resource-inner .section-body { color: rgba(255,255,255,0.7); margin: 0 auto 32px; }
+
+  .resource-features {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  .resource-feature {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+    font-weight: 600;
+  }
+
+  .feature-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+  .resource-form {
+    display: flex;
+    gap: 8px;
+    max-width: 440px;
+    margin: 0 auto 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .resource-form input {
+    flex: 1;
+    min-width: 220px;
+    padding: 12px 16px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 3px;
+    background: rgba(255,255,255,0.1);
+    color: var(--white);
+    outline: none;
+  }
+
+  .resource-form input::placeholder { color: rgba(255,255,255,0.4); }
+  .resource-form input:focus { border-color: var(--gold); }
+
+  .resource-note { font-size: 12px; color: rgba(255,255,255,0.35); }
+
+  /* ── TESTIMONIALS ── */
+  .reviews-section { background: var(--off-white); }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .review-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 24px;
+  }
+
+  .review-stars { color: var(--gold); font-size: 15px; letter-spacing: 2px; margin-bottom: 12px; }
+
+  .review-text {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.65;
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+
+  .review-author { font-size: 14px; font-weight: 700; color: var(--navy); }
+  .review-service { font-size: 12px; color: var(--muted); letter-spacing: 0.3px; }
+
+  /* ── ABOUT SECTION ── */
+  .about-section { background: var(--white); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  @media (max-width: 680px) {
+    .about-grid { grid-template-columns: 1fr; }
+  }
+
+  .about-card {
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    border-top: 4px solid var(--navy);
+  }
+
+  .about-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+
+  .about-card p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    background: var(--navy-dark);
+    padding: 64px 24px;
+    text-align: center;
+    border-top: 3px solid var(--gold);
+  }
+
+  .cta-inner { max-width: 580px; margin: 0 auto; }
+
+  .cta-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 16px;
+    line-height: 1.15;
+  }
+
+  .cta-title span { color: var(--gold); }
+
+  .cta-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-outline {
+    padding: 13px 24px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0a1320;
+    padding: 32px 24px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .footer-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-brand-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--gold);
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    margin-top: 4px;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  .social-links {
+    display: flex;
+    gap: 12px;
+  }
+
+  .social-link {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .social-link:hover { background: var(--gold); color: var(--navy-dark); }
+
+  .disclaimer {
+    max-width: 960px;
+    margin: 20px auto 0;
+    font-size: 11px;
+    color: rgba(255,255,255,0.2);
+    line-height: 1.5;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 580px) {
+    .trust-bar { gap: 20px; }
+    .trust-item { font-size: 12px; }
+    nav { padding: 0 16px; }
+    .nav-links { display: none; }
+    .story-grid, .about-grid { grid-template-columns: 1fr; }
+    .books-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-brand">The Complete <span>VA Playbook</span></a>
+  <ul class="nav-links">
+    <li><a href="#books">The Books</a></li>
+    <li><a href="#story">Our Story</a></li>
+    <li><a href="#free">Free Resource</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Written Veteran-to-Veteran</div>
+    <h1>You Earned These Benefits.<br><span>Now Collect Them.</span></h1>
+    <p class="hero-sub">Plain-English guides written by two 100% service-disabled veterans who learned the system the hard way — and spent years helping others do it right.</p>
+    <div class="star-div"><span class="stars">★ ★ ★</span></div>
+    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:16px;">
+      <a href="https://www.amazon.com/dp/B0GXH14V31" target="_blank" rel="noopener" class="btn-gold">Get the Book on Amazon</a>
+      <a href="https://mwestcott-sys.github.io/va-tracker/" target="_blank" rel="noopener" class="btn-outline" style="padding:13px 24px;">Try the Free VA Tracker →</a>
+    </div>
+    <p class="hero-note">Free interactive VA claim tracker — no signup required. Use it right now.</p>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <div class="trust-icon">★</div>
+    Two 100% Service-Disabled Veterans
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">✓</div>
+    Available on Amazon
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">★</div>
+    Veteran-to-Veteran Voice
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">✓</div>
+    Plain English — No Bureaucratic Jargon
+  </div>
+</div>
+
+<!-- BOOKS -->
+<section class="books-section" id="books">
+  <div class="section-inner">
+    <div class="section-label">The Complete VA Playbook Series</div>
+    <h2 class="section-title">Two Books. <span>Every Benefit You Earned.</span></h2>
+    <div class="divider"></div>
+    <div class="books-grid">
+
+      <!-- BOOK 1 -->
+      <div class="book-card">
+        <div class="book-card-header">
+          <div class="book-cover-mock">
+            <div class="cover-title">THE COMPLETE</div>
+            <div class="cover-gold">VA DISABILITY CLAIM</div>
+            <div class="cover-line"></div>
+            <div class="cover-title">PLAYBOOK</div>
+          </div>
+          <div class="book-meta">
+            <span class="book-badge badge-blue">Book 1 — Available Now</span>
+            <div class="book-title-text">The Complete VA Disability Claim Playbook</div>
+            <div class="book-subtitle-text">A Veteran-to-Veteran Guide to Building, Filing, and Winning Your Claim</div>
+          </div>
+        </div>
+        <div class="book-card-body">
+          <ul class="book-bullets">
+            <li><span class="bullet-check">✓</span> 25-chapter workbook with fill-in exercises</li>
+            <li><span class="bullet-check">✓</span> VASRD plain-English rating criteria appendix</li>
+            <li><span class="bullet-check">✓</span> C&P exam preparation — what to say and how</li>
+            <li><span class="bullet-check">✓</span> Secondary conditions strategy</li>
+            <li><span class="bullet-check">✓</span> Three appeal lanes explained in plain English</li>
+            <li><span class="bullet-check">✓</span> Long-term strategy to build toward 100%</li>
+          </ul>
+          <div class="book-price">
+            <div class="price-item">
+              <div class="price-label">Paperback</div>
+              <div class="price-amount">$24.99</div>
+            </div>
+            <div class="price-divider"></div>
+            <div class="price-item">
+              <div class="price-label">Kindle</div>
+              <div class="price-amount">$9.99</div>
+            </div>
+          </div>
+          <a href="https://www.amazon.com/dp/B0GXH14V31" target="_blank" rel="noopener" class="btn-amazon">Get It on Amazon →</a>
+        </div>
+      </div>
+
+      <!-- BOOK 2 -->
+      <div class="book-card">
+        <div class="book-card-header">
+          <div class="book-cover-mock">
+            <div class="cover-title">THE COMPLETE</div>
+            <div class="cover-gold">VA HEALTH CARE</div>
+            <div class="cover-line"></div>
+            <div class="cover-title">PLAYBOOK</div>
+          </div>
+          <div class="book-meta">
+            <span class="book-badge badge-gold">Book 2 — Coming Soon</span>
+            <div class="book-title-text">The Complete VA Health Care Playbook</div>
+            <div class="book-subtitle-text">A Veteran-to-Veteran Field Guide to Getting the Health Care You Earned</div>
+          </div>
+        </div>
+        <div class="book-card-body">
+          <ul class="book-bullets">
+            <li><span class="bullet-check">✓</span> Enrollment guide — Priority Groups explained</li>
+            <li><span class="bullet-check">✓</span> What VA health care actually covers</li>
+            <li><span class="bullet-check">✓</span> Mental health, pharmacy, community care</li>
+            <li><span class="bullet-check">✓</span> PACT Act and combat veteran eligibility</li>
+            <li><span class="bullet-check">✓</span> How to advocate when the system pushes back</li>
+            <li><span class="bullet-check">✓</span> 6 fill-in workbook tools included</li>
+          </ul>
+          <div class="book-price">
+            <div class="price-item">
+              <div class="price-label">Paperback</div>
+              <div class="price-amount">Coming</div>
+            </div>
+            <div class="price-divider"></div>
+            <div class="price-item">
+              <div class="price-label">Kindle</div>
+              <div class="price-amount">Soon</div>
+            </div>
+          </div>
+          <a href="https://mwestcott-sys.github.io/va-tracker/" target="_blank" rel="noopener" class="btn-amazon" style="background: var(--steel);">Try the Free VA Tracker While You Wait →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story-section" id="story">
+  <div class="section-inner">
+    <div class="story-grid">
+      <div class="story-text">
+        <div class="section-label">Our Story</div>
+        <h2 class="section-title">The Book Nobody Handed Us</h2>
+        <div class="divider"></div>
+        <p>In 1987, I walked out of a VA office with a 0% rating and a piece of advice that cost me years of compensation: <strong>"You can't appeal. You just have to live with it."</strong></p>
+        <p>I didn't go back for a long time. I didn't think it was worth trying.</p>
+        <p>Eventually, a fellow veteran sat me down and explained how the system actually worked. I filed again — the right way — and reached 100%. Since then I have helped dozens of other veterans do the same.</p>
+        <div class="pull-quote">"Nobody handed us a roadmap. These books are that roadmap."</div>
+        <p>Ethan Reed, my co-author, served in the 75th Ranger Regiment. The Army's own Medical Evaluation Board formally recognized his service-connected conditions before he left uniform — the institution itself acknowledged what his service cost him.</p>
+        <p>We wrote these books because that information gap is still costing veterans money and access to care every single day.</p>
+      </div>
+      <div class="author-cards">
+        <div class="author-card">
+          <div class="author-name">Michael Westcott</div>
+          <div class="author-creds">U.S. Army Combat Engineer · Desert Storm Veteran<br>100% Service-Disabled Veteran</div>
+          <div class="author-bio">Principal engineer and firm owner. Spent years helping fellow veterans navigate the VA system after reaching 100% himself. Co-author of The Complete VA Playbook series.</div>
+        </div>
+        <div class="author-card">
+          <div class="author-name">Ethan Reed</div>
+          <div class="author-creds">Combat Veteran, 75th Ranger Regiment<br>100% Service-Disabled Veteran — Military Medical Retirement</div>
+          <div class="author-bio">The Army's own Medical Evaluation Board formally recognized his service-connected conditions before he left uniform. His rating came through the MEB/PEB process — the institution acknowledged what his service cost him.</div>
+        </div>
+        <div class="about-card" style="border-top-color: var(--gold);">
+          <h3>What Makes These Books Different</h3>
+          <p>Every other guide in this category tells veterans what to do. Ours makes you do it on the page — fill-in exercises, worst-day description templates, C&P prep sheets, and VASRD criteria in plain English. This is a workbook, not a read-once guide.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FREE RESOURCE -->
+<section class="resource-section" id="free">
+  <div class="resource-inner">
+    <div class="section-label">Free Tool — No Signup Required</div>
+    <h2 class="section-title">The Complete VA Claim Tracker</h2>
+    <p class="section-body">A free interactive web tool that helps you track your entire VA disability claim from start to finish — service connection, medical evidence, C&P exam prep, decision tracking, and appeals. Built as a companion to the book. Use it right now, no account needed.</p>
+    <div class="resource-features">
+      <div class="resource-feature"><div class="feature-dot"></div>Service connection log</div>
+      <div class="resource-feature"><div class="feature-dot"></div>Evidence tracker</div>
+      <div class="resource-feature"><div class="feature-dot"></div>C&P exam prep</div>
+      <div class="resource-feature"><div class="feature-dot"></div>Decision & appeal log</div>
+    </div>
+    <a href="https://mwestcott-sys.github.io/va-tracker/" target="_blank" rel="noopener" class="btn-gold" style="display:inline-block; padding: 14px 36px; font-size: 16px; margin-bottom: 16px;">Open the Free VA Tracker →</a>
+    <p class="resource-note">Works on any phone, tablet, or computer. Bookmark it and use it throughout your claim.</p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="section-inner">
+    <div class="section-label">Reader Reviews</div>
+    <h2 class="section-title">Veterans Who Used the <span>Playbook</span></h2>
+    <div class="divider"></div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The C&P exam chapter alone was worth the price. I had no idea I needed to describe my worst days specifically. Changed how I approached my exam completely."</p>
+        <div class="review-author">Amazon Verified Purchase</div>
+        <div class="review-service">Army Veteran</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Finally a book that treats you like an adult and tells you exactly what you need to do. The workbook format means I'm actually using it instead of just reading it."</p>
+        <div class="review-author">Amazon Verified Purchase</div>
+        <div class="review-service">Marine Corps Veteran</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The VASRD appendix is something I've never seen in any other VA guide. Knowing exactly what rating criteria exist before my doctor appointment changed everything."</p>
+        <div class="review-author">Amazon Verified Purchase</div>
+        <div class="review-service">Navy Veteran</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL SIGNUP -->
+<section style="background: var(--off-white); padding: 64px 24px; border-top: 1px solid var(--border);">
+  <div style="max-width: 580px; margin: 0 auto; text-align: center;">
+    <div class="section-label" style="text-align:center;">Stay in the Loop</div>
+    <h2 class="section-title" style="text-align:center;">Be the First to Know</h2>
+    <div class="divider" style="margin: 0 auto 20px;"></div>
+    <p style="font-size: 16px; color: var(--muted); margin-bottom: 12px; line-height: 1.65;">
+      Sign up to get notified when <strong style="color:var(--navy);">The Complete VA Health Care Playbook</strong> launches — plus new VA claim tips, condition-specific tracking sheets, and resources delivered straight to your inbox.
+    </p>
+    <p style="font-size: 14px; color: var(--muted); margin-bottom: 28px; line-height: 1.5; font-style: italic;">
+      No spam. No sales pitches. Just practical information veterans can use.
+    </p>
+    <form onsubmit="handleSignup(event)" style="display:flex; gap:8px; max-width:460px; margin:0 auto 12px; flex-wrap:wrap; justify-content:center;">
+      <input type="text" id="signup-name" placeholder="First name" aria-label="First name"
+        style="flex:0 0 130px; padding:13px 16px; font-family:'Source Sans 3',sans-serif; font-size:15px; border:1px solid var(--border); border-radius:3px; outline:none; color:var(--text);">
+      <input type="email" id="signup-email" placeholder="Email address" aria-label="Email address"
+        style="flex:1; min-width:200px; padding:13px 16px; font-family:'Source Sans 3',sans-serif; font-size:15px; border:1px solid var(--border); border-radius:3px; outline:none; color:var(--text);">
+      <button type="submit" class="btn-gold" style="width:100%; margin-top:4px;">Count Me In →</button>
+    </form>
+    <div id="signup-confirm" style="display:none; color:var(--navy); font-weight:700; font-size:15px; margin-top:12px;">
+      ✓ You are on the list. We will be in touch.
+    </div>
+    <p style="font-size: 12px; color: #aaa; margin-top: 10px;">
+      We respect your privacy. Unsubscribe anytime.
+    </p>
+    <div style="display:flex; justify-content:center; gap:32px; margin-top:28px; flex-wrap:wrap;">
+      <div style="text-align:center;">
+        <div style="font-family:'Oswald',sans-serif; font-size:24px; font-weight:700; color:var(--navy);">Book 2</div>
+        <div style="font-size:12px; color:var(--muted); letter-spacing:1px; text-transform:uppercase;">Coming Soon</div>
+      </div>
+      <div style="width:1px; background:var(--border);"></div>
+      <div style="text-align:center;">
+        <div style="font-family:'Oswald',sans-serif; font-size:24px; font-weight:700; color:var(--navy);">Free</div>
+        <div style="font-size:12px; color:var(--muted); letter-spacing:1px; text-transform:uppercase;">Condition Sheets</div>
+      </div>
+      <div style="width:1px; background:var(--border);"></div>
+      <div style="text-align:center;">
+        <div style="font-family:'Oswald',sans-serif; font-size:24px; font-weight:700; color:var(--navy);">Tips</div>
+        <div style="font-size:12px; color:var(--muted); letter-spacing:1px; text-transform:uppercase;">VA Claim Strategy</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2 class="cta-title">You Held Up Your End<br>of the <span>Deal.</span></h2>
+    <p class="cta-sub">You filled out a will at eighteen. You served. You came home carrying weight that never fully sets down. These books exist so you collect what you earned.</p>
+    <div class="cta-buttons">
+      <a href="https://www.amazon.com/dp/B0GXH14V31" target="_blank" rel="noopener" class="btn-gold">Get Book 1 on Amazon</a>
+      <a href="https://mwestcott-sys.github.io/va-tracker/" target="_blank" rel="noopener" class="btn-outline">Try the Free VA Tracker</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-text">The Complete VA Playbook</div>
+      <div class="footer-copy">© 2025 Michael Westcott & Ethan Reed. All rights reserved.</div>
+    </div>
+    <div class="social-links">
+      <a href="#" class="social-link" aria-label="Facebook">f</a>
+      <a href="#" class="social-link" aria-label="TikTok">T</a>
+      <a href="#" class="social-link" aria-label="YouTube">Y</a>
+      <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#books">Books</a></li>
+      <li><a href="#story">About</a></li>
+      <li><a href="#free">Free Resource</a></li>
+      <li><a href="mailto:mike@completevaplaybook.com">Contact</a></li>
+    </ul>
+  </div>
+  <p class="disclaimer">This website and its associated books are intended for general informational and educational purposes only. They do not constitute legal or medical advice. The authors are veterans sharing personal experience — they are not attorneys, accredited VA claims agents, or licensed medical professionals. Not affiliated with or endorsed by the U.S. Department of Veterans Affairs.</p>
+</footer>
+
+<script>
+function handleSignup(e) {
+  e.preventDefault();
+  var name  = document.getElementById('signup-name').value.trim();
+  var email = document.getElementById('signup-email').value.trim();
+
+  if (!email || !email.includes('@')) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+  // Submit silently to Google Forms → Google Sheets
+  var FORM_ID   = '1FAIpQLSdRNhvEroc1Hm0yTjsw9gXksPiZnBV-KOhaJIWtmAO9qxtc3w';
+  var ENTRY_NAME  = 'entry.1133618067';
+  var ENTRY_EMAIL = 'entry.1390566126';
+
+  var url = 'https://docs.google.com/forms/u/0/d/e/' + FORM_ID + '/formResponse'
+    + '?' + ENTRY_NAME  + '=' + encodeURIComponent(name)
+    + '&' + ENTRY_EMAIL + '=' + encodeURIComponent(email)
+    + '&submit=Submit';
+
+  // Send via hidden iframe — no page reload, no redirect
+  var iframe = document.getElementById('gform-sink');
+  if (!iframe) {
+    iframe = document.createElement('iframe');
+    iframe.id = 'gform-sink';
+    iframe.name = 'gform-sink';
+    iframe.style.cssText = 'display:none;width:0;height:0;border:0;';
+    document.body.appendChild(iframe);
+  }
+
+  var form = document.createElement('form');
+  form.method = 'POST';
+  form.action = 'https://docs.google.com/forms/u/0/d/e/' + FORM_ID + '/formResponse';
+  form.target = 'gform-sink';
+
+  var fields = {};
+  fields[ENTRY_NAME]  = name;
+  fields[ENTRY_EMAIL] = email;
+
+  for (var key in fields) {
+    var input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = key;
+    input.value = fields[key];
+    form.appendChild(input);
+  }
+
+  document.body.appendChild(form);
+  form.submit();
+  document.body.removeChild(form);
+
+  // Show confirmation
+  document.getElementById('signup-confirm').style.display = 'block';
+  document.getElementById('signup-name').value  = '';
+  document.getElementById('signup-email').value = '';
+}
+</script>
+
+</body>
+</html>
