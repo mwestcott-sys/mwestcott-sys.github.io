@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Find your state's veteran benefits — property tax exemptions, license plates, education benefits, and more. Direct links to every state's official veterans affairs department.">
+<title>Your State's Veteran Benefits | The Complete VA Playbook</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --navy: #1c2d4a;
+    --navy-dark: #111e33;
+    --steel: #2878a8;
+    --steel-light: #dceef9;
+    --gold: #c8a84b;
+    --gold-light: #f5d97a;
+    --white: #ffffff;
+    --off-white: #f4f7fb;
+    --text: #1a1a2e;
+    --muted: #5a6a7a;
+    --border: #dde4ec;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--text);
+    background: var(--white);
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--navy-dark);
+    border-bottom: 2px solid var(--gold);
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 58px;
+  }
+
+  .nav-brand {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.5px;
+    text-decoration: none;
+  }
+
+  .nav-brand span { color: var(--gold); }
+
+  .nav-back {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    letter-spacing: 0.3px;
+  }
+
+  .nav-back:hover { color: var(--gold); }
+
+  .hero {
+    background: linear-gradient(160deg, var(--navy-dark) 0%, #1a3460 60%, #0f2040 100%);
+    padding: 56px 24px 48px;
+    text-align: center;
+  }
+
+  .hero-inner { max-width: 760px; margin: 0 auto; }
+
+  .hero-eyebrow {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    padding: 6px 16px;
+    border: 1px solid rgba(200,168,75,0.35);
+    border-radius: 2px;
+  }
+
+  .hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(30px, 5vw, 44px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 span { color: var(--gold); }
+
+  .hero-sub {
+    font-size: 17px;
+    color: rgba(255,255,255,0.75);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+
+  section { padding: 56px 24px; }
+
+  .section-inner { max-width: 880px; margin: 0 auto; }
+
+  .section-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--steel);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(24px, 3.5vw, 32px);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+
+  .divider {
+    width: 48px;
+    height: 3px;
+    background: var(--gold);
+    margin-bottom: 24px;
+    border-radius: 2px;
+  }
+
+  .intro-section p {
+    font-size: 17px;
+    color: var(--muted);
+    margin-bottom: 16px;
+    max-width: 760px;
+  }
+
+  .intro-section p strong { color: var(--navy); }
+
+  .categories-section { background: var(--off-white); }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    margin-top: 8px;
+  }
+
+  .category-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--steel);
+    border-radius: 0 6px 6px 0;
+    padding: 14px 18px;
+    font-size: 15px;
+    color: var(--text);
+  }
+
+  .directory-note {
+    background: rgba(200,168,75,0.08);
+    border: 1px solid rgba(200,168,75,0.3);
+    border-radius: 4px;
+    padding: 16px 20px;
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+
+  .directory-note a { color: var(--navy); font-weight: 600; }
+
+  .state-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+  }
+
+  .state-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 11px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .state-link:hover { border-color: var(--steel); background: var(--steel-light); }
+
+  .state-link .arrow { color: var(--steel); font-weight: 700; flex-shrink: 0; }
+
+  .mistakes-section { background: var(--navy); }
+
+  .mistakes-section .section-label { color: var(--gold); }
+
+  .mistakes-section .section-title { color: var(--white); }
+
+  .mistakes-list {
+    list-style: none;
+    margin-top: 8px;
+  }
+
+  .mistakes-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 16px;
+    color: rgba(255,255,255,0.75);
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    line-height: 1.55;
+  }
+
+  .mistakes-list li:last-child { border-bottom: none; }
+
+  .mistake-x { color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+  .cta-section {
+    background: var(--navy-dark);
+    padding: 56px 24px;
+    text-align: center;
+    border-top: 3px solid var(--gold);
+  }
+
+  .cta-inner { max-width: 600px; margin: 0 auto; }
+
+  .cta-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(24px, 3.5vw, 32px);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 14px;
+  }
+
+  .cta-title span { color: var(--gold); }
+
+  .cta-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+
+  .btn-gold {
+    display: inline-block;
+    padding: 14px 32px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: var(--gold);
+    color: var(--navy-dark);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-gold:hover { background: var(--gold-light); }
+
+  footer {
+    background: #0a1320;
+    padding: 28px 24px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+  }
+
+  .disclaimer {
+    max-width: 880px;
+    margin: 16px auto 0;
+    font-size: 11px;
+    color: rgba(255,255,255,0.2);
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  @media (max-width: 580px) {
+    nav { padding: 0 16px; }
+    .state-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">The Complete <span>VA Playbook</span></a>
+  <a href="index.html" class="nav-back">← Back to Home</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">From Chapter 27, Book 3</div>
+    <h1>Your State's <span>Veteran Benefits</span></h1>
+    <p class="hero-sub">These benefits don't come from the VA — they come from your state, and every state writes its own rules. There's no federal floor, and nothing carries over when you move. Here's what to look for, and exactly where to go check it for yourself.</p>
+  </div>
+</section>
+
+<section class="intro-section">
+  <div class="section-inner">
+    <div class="section-label">Why This Page Looks Different</div>
+    <h2 class="section-title">We Can't Catalog 50 Rulebooks — But We Can Point You to Them</h2>
+    <div class="divider"></div>
+    <p>Every state runs its own veterans affairs department, writes its own eligibility rules, and can change them at its next legislative session. A page (or a book) claiming to list the exact current benefit in all 50 states would be wrong within a year, no matter how carefully it was researched today.</p>
+    <p>So instead of guessing at details that go stale, this page does two things: it tells you <strong>what categories of benefit to look for</strong>, and it links you straight to <strong>your state's own official department</strong> — the only source that's actually current.</p>
+  </div>
+</section>
+
+<section class="categories-section">
+  <div class="section-inner">
+    <div class="section-label">What to Look For</div>
+    <h2 class="section-title">Common Categories, State to State</h2>
+    <div class="divider"></div>
+    <p style="color:var(--muted); margin-bottom: 20px; max-width: 700px;">Not every state offers every category below, and the thresholds vary widely. Use this as your checklist when you visit your own state's site.</p>
+    <div class="category-grid">
+      <div class="category-item">Property tax exemption for disabled veterans</div>
+      <div class="category-item">State income tax break on military retirement pay</div>
+      <div class="category-item">Discounted or free veteran license plates</div>
+      <div class="category-item">Discounted or free hunting &amp; fishing licenses</div>
+      <div class="category-item">State veterans nursing homes &amp; cemeteries</div>
+      <div class="category-item">State-funded education benefits or scholarships</div>
+      <div class="category-item">Vehicle registration fee waivers</div>
+      <div class="category-item">Hiring preference for state civil service jobs</div>
+      <div class="category-item">Veterans treatment courts</div>
+      <div class="category-item">Emergency financial assistance grants</div>
+      <div class="category-item">State veteran-owned business programs</div>
+      <div class="category-item">Surviving spouse &amp; Gold Star family benefits</div>
+    </div>
+  </div>
+</section>
+
+<section id="directory">
+  <div class="section-inner">
+    <div class="section-label">Find Yours</div>
+    <h2 class="section-title">Every State's Official Veterans Affairs Department</h2>
+    <div class="divider"></div>
+    <div class="directory-note">
+      These links go directly to each state's own official veterans affairs department — the authoritative source for that state's current programs. We don't maintain the content on these sites, and neither does the national directory we sourced this list from (NASDVA.us) — treat anything you read there as current only as of your own visit, and confirm specifics with your county Veteran Service Officer.
+    </div>
+    <div class="state-grid">
+      <a href="https://va.alabama.gov/" target="_blank" rel="noopener" class="state-link">Alabama <span class="arrow">→</span></a>
+      <a href="http://veterans.alaska.gov/" target="_blank" rel="noopener" class="state-link">Alaska <span class="arrow">→</span></a>
+      <a href="https://dvs.az.gov/" target="_blank" rel="noopener" class="state-link">Arizona <span class="arrow">→</span></a>
+      <a href="http://www.veterans.arkansas.gov/" target="_blank" rel="noopener" class="state-link">Arkansas <span class="arrow">→</span></a>
+      <a href="https://www.calvet.ca.gov/" target="_blank" rel="noopener" class="state-link">California <span class="arrow">→</span></a>
+      <a href="https://www.colorado.gov/vets" target="_blank" rel="noopener" class="state-link">Colorado <span class="arrow">→</span></a>
+      <a href="https://portal.ct.gov/DVA/" target="_blank" rel="noopener" class="state-link">Connecticut <span class="arrow">→</span></a>
+      <a href="https://veteransaffairs.delaware.gov" target="_blank" rel="noopener" class="state-link">Delaware <span class="arrow">→</span></a>
+      <a href="https://communityaffairs.dc.gov/mova" target="_blank" rel="noopener" class="state-link">Washington, D.C. <span class="arrow">→</span></a>
+      <a href="https://www.floridavets.org/" target="_blank" rel="noopener" class="state-link">Florida <span class="arrow">→</span></a>
+      <a href="https://veterans.georgia.gov/" target="_blank" rel="noopener" class="state-link">Georgia <span class="arrow">→</span></a>
+      <a href="http://dod.hawaii.gov/" target="_blank" rel="noopener" class="state-link">Hawaii <span class="arrow">→</span></a>
+      <a href="http://www.veterans.idaho.gov/" target="_blank" rel="noopener" class="state-link">Idaho <span class="arrow">→</span></a>
+      <a href="https://veterans.illinois.gov" target="_blank" rel="noopener" class="state-link">Illinois <span class="arrow">→</span></a>
+      <a href="https://www.in.gov/dva/" target="_blank" rel="noopener" class="state-link">Indiana <span class="arrow">→</span></a>
+      <a href="https://va.iowa.gov/" target="_blank" rel="noopener" class="state-link">Iowa <span class="arrow">→</span></a>
+      <a href="https://kcva.ks.gov/" target="_blank" rel="noopener" class="state-link">Kansas <span class="arrow">→</span></a>
+      <a href="https://veterans.ky.gov/Pages/default.aspx" target="_blank" rel="noopener" class="state-link">Kentucky <span class="arrow">→</span></a>
+      <a href="https://www.vetaffairs.la.gov/" target="_blank" rel="noopener" class="state-link">Louisiana <span class="arrow">→</span></a>
+      <a href="https://www.maine.gov/veterans/" target="_blank" rel="noopener" class="state-link">Maine <span class="arrow">→</span></a>
+      <a href="https://veterans.maryland.gov/" target="_blank" rel="noopener" class="state-link">Maryland <span class="arrow">→</span></a>
+      <a href="https://www.mass.gov/orgs/massachusetts-department-of-veterans-services" target="_blank" rel="noopener" class="state-link">Massachusetts <span class="arrow">→</span></a>
+      <a href="http://Michigan.gov/mvaa" target="_blank" rel="noopener" class="state-link">Michigan <span class="arrow">→</span></a>
+      <a href="https://mn.gov/mdva/" target="_blank" rel="noopener" class="state-link">Minnesota <span class="arrow">→</span></a>
+      <a href="https://www.msva.ms.gov/" target="_blank" rel="noopener" class="state-link">Mississippi <span class="arrow">→</span></a>
+      <a href="https://mvc.dps.mo.gov/" target="_blank" rel="noopener" class="state-link">Missouri <span class="arrow">→</span></a>
+      <a href="https://dma.mt.gov/" target="_blank" rel="noopener" class="state-link">Montana <span class="arrow">→</span></a>
+      <a href="https://veterans.nebraska.gov/" target="_blank" rel="noopener" class="state-link">Nebraska <span class="arrow">→</span></a>
+      <a href="https://veterans.nv.gov/" target="_blank" rel="noopener" class="state-link">Nevada <span class="arrow">→</span></a>
+      <a href="https://www.dmavs.nh.gov/veterans-services" target="_blank" rel="noopener" class="state-link">New Hampshire <span class="arrow">→</span></a>
+      <a href="https://www.nj.gov/military/" target="_blank" rel="noopener" class="state-link">New Jersey <span class="arrow">→</span></a>
+      <a href="http://www.nmdvs.org/" target="_blank" rel="noopener" class="state-link">New Mexico <span class="arrow">→</span></a>
+      <a href="https://veterans.ny.gov/" target="_blank" rel="noopener" class="state-link">New York <span class="arrow">→</span></a>
+      <a href="https://www.milvets.nc.gov/" target="_blank" rel="noopener" class="state-link">North Carolina <span class="arrow">→</span></a>
+      <a href="http://www.nd.gov/veterans/" target="_blank" rel="noopener" class="state-link">North Dakota <span class="arrow">→</span></a>
+      <a href="https://dvs.ohio.gov/wps/portal/gov/dvs/" target="_blank" rel="noopener" class="state-link">Ohio <span class="arrow">→</span></a>
+      <a href="https://oklahoma.gov/veterans.html" target="_blank" rel="noopener" class="state-link">Oklahoma <span class="arrow">→</span></a>
+      <a href="https://www.oregon.gov/odva/Pages/default.aspx" target="_blank" rel="noopener" class="state-link">Oregon <span class="arrow">→</span></a>
+      <a href="https://www.dmva.pa.gov/Pages/default.aspx" target="_blank" rel="noopener" class="state-link">Pennsylvania <span class="arrow">→</span></a>
+      <a href="http://www.vets.ri.gov/" target="_blank" rel="noopener" class="state-link">Rhode Island <span class="arrow">→</span></a>
+      <a href="https://scdva.sc.gov/" target="_blank" rel="noopener" class="state-link">South Carolina <span class="arrow">→</span></a>
+      <a href="https://vetaffairs.sd.gov/" target="_blank" rel="noopener" class="state-link">South Dakota <span class="arrow">→</span></a>
+      <a href="https://www.tn.gov/veteran/" target="_blank" rel="noopener" class="state-link">Tennessee <span class="arrow">→</span></a>
+      <a href="https://www.tvc.texas.gov/" target="_blank" rel="noopener" class="state-link">Texas <span class="arrow">→</span></a>
+      <a href="https://veterans.utah.gov/" target="_blank" rel="noopener" class="state-link">Utah <span class="arrow">→</span></a>
+      <a href="https://veterans.vermont.gov/" target="_blank" rel="noopener" class="state-link">Vermont <span class="arrow">→</span></a>
+      <a href="https://www.dvs.virginia.gov/" target="_blank" rel="noopener" class="state-link">Virginia <span class="arrow">→</span></a>
+      <a href="https://www.dva.wa.gov/" target="_blank" rel="noopener" class="state-link">Washington <span class="arrow">→</span></a>
+      <a href="https://veterans.wv.gov/Pages/default.aspx" target="_blank" rel="noopener" class="state-link">West Virginia <span class="arrow">→</span></a>
+      <a href="https://dva.wi.gov/Pages/Home.aspx" target="_blank" rel="noopener" class="state-link">Wisconsin <span class="arrow">→</span></a>
+      <a href="https://www.wyomilitary.wyo.gov/veterans/" target="_blank" rel="noopener" class="state-link">Wyoming <span class="arrow">→</span></a>
+      <a href="http://gvao.guam.gov/" target="_blank" rel="noopener" class="state-link">Guam <span class="arrow">→</span></a>
+      <a href="https://veterans.vi.gov/" target="_blank" rel="noopener" class="state-link">U.S. Virgin Islands <span class="arrow">→</span></a>
+      <a href="https://www.va.gov/directory/guide/state.asp?State=PR&dnum=ALL" target="_blank" rel="noopener" class="state-link">Puerto Rico <span class="arrow">→</span></a>
+      <a href="https://www.va.gov/directory/guide/facility.asp?ID=5982&dnum=1" target="_blank" rel="noopener" class="state-link">American Samoa <span class="arrow">→</span></a>
+      <a href="https://www.va.gov/directory/guide/state.asp?dnum=All&STATE=MP&map=1" target="_blank" rel="noopener" class="state-link">N. Mariana Islands <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="mistakes-section">
+  <div class="section-inner">
+    <div class="section-label">Mistakes We See Most Often</div>
+    <h2 class="section-title">Before You Assume Anything</h2>
+    <ul class="mistakes-list">
+      <li><span class="mistake-x">✕</span> Assuming a state benefit transfers with you when you move. It doesn't — you start over under an entirely new set of rules every time you cross a state line.</li>
+      <li><span class="mistake-x">✕</span> Assuming your federal VA disability rating automatically triggers a state property tax exemption. In most states it doesn't — you need a separate state application, often certified through a county Veteran Service Officer.</li>
+      <li><span class="mistake-x">✕</span> Assuming every state taxes military retirement pay and VA disability compensation the same way. The variation is real, and disability compensation itself is functionally untaxed almost everywhere.</li>
+      <li><span class="mistake-x">✕</span> Not realizing a surviving spouse or Gold Star family member may qualify under their own distinct category, not simply by inheriting the veteran's eligibility.</li>
+      <li><span class="mistake-x">✕</span> Treating an outdated source, or another state's program, as current without checking your own state's official department directly.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2 class="cta-title">This Is One Chapter of <span>32.</span></h2>
+    <p class="cta-sub">The Complete VA Overlooked Benefits Playbook covers education, home loans, pension, insurance, and survivor benefits — everything you've earned beyond your disability rating.</p>
+    <a href="https://www.amazon.com/dp/B0HNTM8GCC" target="_blank" rel="noopener" class="btn-gold">Get the Book on Amazon →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-copy">© 2026 Michael Westcott &amp; Ethan Reed. All rights reserved.</div>
+  <p class="disclaimer">State benefit links are provided for convenience and point to each state's own official veterans affairs department. We do not maintain the content on these external sites. Confirm current eligibility and requirements directly with your state's department or your county Veteran Service Officer. This page does not constitute legal advice and is not affiliated with or endorsed by the U.S. Department of Veterans Affairs.</p>
+</footer>
+
+</body>
+</html>
